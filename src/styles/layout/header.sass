@@ -1,0 +1,45 @@
+.header
+	padding: 1.5rem 0px 0px
+	.navbar-brand
+		.navbar-item
+			img
+				max-height: inherit
+		.navbar-burger
+			&:hover
+				background: none
+			span
+				background: $white
+				height: 2px
+				width: 18px
+	.navbar-menu
+		.navbar-start
+			.navbar-item
+				.navbar-link
+					color: $white
+					&::after
+						@include arrow(#fff)
+				&.is-hoverable
+					.navbar-dropdown
+						background: $white
+						border-radius: 5px
+
+// RESPONSIVE DESKTOP
+@mixin header-desktop
+	.header
+		.navbar-menu
+			.navbar-start
+				.navbar-item
+					&:hover
+						.navbar-link
+							&::before
+								width: 75%
+					.navbar-link
+						&::before
+							background: $white
+							bottom: calc( 0.5rem + 6px )
+							content: ''
+							height: 3px
+							left: 0.70rem
+							position: absolute
+							transition: all 0.3s
+							width: 0%

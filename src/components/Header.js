@@ -1,20 +1,32 @@
+import React, {useState, useEffect} from 'react'
+
 export default function Header({ information }) {
+	const [menuStatus, setMenuStatus] = useState(false);
+
+	useEffect(() => {
+		window.addEventListener('scroll', function() {
+            if( menuStatus === true ) {
+                setMenuStatus(false)
+            }
+        });
+	});
+
 	return (
-		<div className='header'>
-			<div className='container'>
-				<nav className="navbar">
+		<header className='header'>
+			<nav className="navbar is-transparent">
+				<div className='container'>
 					<div className="navbar-brand">
 						<a className="navbar-item" href="/">
 							<img src="/images/logo.svg" alt="Blogr Landing Page Logo" />
 						</a>
-						<div className="navbar-burger" data-target="navbarExampleTransparentExample">
+						<div className={`navbar-burger ${menuStatus ? 'is-active' : ''}`} onClick={() => setMenuStatus(!menuStatus)}>
 							<span></span>
 							<span></span>
 							<span></span>
 						</div>
 					</div>
 
-					<div id="navbarExampleTransparentExample" className="navbar-menu">
+					<div className={`navbar-menu ${menuStatus ? 'is-active' : ''}`} >
 						<div className="navbar-start">
 							{information?.map((item, index) => (
 								<div key={index} className={`navbar-item ${item.submenu ? 'has-dropdown is-hoverable' : ''}`}>
@@ -22,8 +34,7 @@ export default function Header({ information }) {
 									<div className="navbar-dropdown is-boxed">
 										{item.submenu?.map((item, index) => (
 											<a key={index} className="navbar-item" href={item.link}>{item.name}</a>
-										))
-										}
+										))}
 									</div>
 								</div>
 							))}
@@ -32,7 +43,7 @@ export default function Header({ information }) {
 						<div className="navbar-end">
 							<div className="navbar-item">
 								<a className="link" href="#">
-									<span>Login</span>
+									<b>Login</b>
 								</a>
 							</div>
 							<div className="navbar-item">
@@ -42,8 +53,8 @@ export default function Header({ information }) {
 							</div>
 						</div>
 					</div>
-				</nav>
-			</div>
-		</div>
+				</div>
+			</nav>
+		</header>
 	)
 }

@@ -1,5 +1,7 @@
 import Head from 'next/head'
+import Header from '../components/Header'
 import Layout from '../components/Layout'
+import { MenuInfo } from '../api/menu'
 
 export default function Home() {
 	return (
@@ -11,10 +13,19 @@ export default function Home() {
 				<link rel="icon" href="/favicon.png" />
 			</Head>
 			<Layout>
-				<div className='container'>
-					<h1 className='title'>Hola Mundo</h1>
-					<p>Lorem Ipsum Dolor Siamet Un</p>
-				</div>
+				<section className="hero is-large hero-banner">
+					<div className='hero-head'>
+						<Header information={MenuInfo} />
+					</div>
+					<div className="hero-body has-text-centered">
+						<h1><strong>A modern publishing platform</strong></h1>
+						<p className='has-text-white'>Grow your audience and build your online brand</p>
+						<div className="buttons is-centered my-5">
+							<button className="button is-primary">Start fro Free</button>
+							<button className="button is-secondary">Learn More</button>
+						</div>
+					</div>
+				</section>
 			</Layout>
 		</>
 	)
