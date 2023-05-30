@@ -2,14 +2,19 @@ import React, {useState, useEffect} from 'react'
 
 export default function Header({ information }) {
 	const [menuStatus, setMenuStatus] = useState(false);
+	const [activeDropdown, setActiveDropdown] = useState(null);
 
 	useEffect(() => {
 		window.addEventListener('scroll', function() {
-            if( menuStatus === true ) {
-                setMenuStatus(false)
-            }
-        });
+			if( menuStatus === true ) {
+				setMenuStatus(false)
+			}
+		});
 	});
+
+	const handleDropdown = (index) => {
+		setActiveDropdown(activeDropdown === index ? null : index);
+	};
 
 	return (
 		<header className='header'>
@@ -30,8 +35,8 @@ export default function Header({ information }) {
 						<div className="navbar-start">
 							{information?.map((item, index) => (
 								<div key={index} className={`navbar-item ${item.submenu ? 'has-dropdown is-hoverable' : ''}`}>
-									<a className={`navbar-link ${item.submenu ? '' : 'is-arrowless'}`} href={item.link}>{item.name}</a>
-									<div className="navbar-dropdown is-boxed">
+									<a className={`navbar-link ${item.submenu ? '' : 'is-arrowless'}`} href={item.link} onClick={() => handleDropdown(index)}>{item.name}</a>
+									<div className={`navbar-dropdown is-boxed ${activeDropdown === index && window.innerWidth < 1023 ? 'is-active' : ''}`}>
 										{item.submenu?.map((item, index) => (
 											<a key={index} className="navbar-item" href={item.link}>{item.name}</a>
 										))}

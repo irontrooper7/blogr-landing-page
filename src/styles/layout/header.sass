@@ -43,3 +43,55 @@
 							position: absolute
 							transition: all 0.3s
 							width: 0%
+
+@media only screen and (max-width: 1023px)
+	.header
+		.navbar-menu
+			&.is-active
+				border-radius: 10px
+				left: 50%
+				position: absolute
+				transform: translateX(-50%)
+				width: 90%
+				padding: 20px
+				.navbar-start
+					margin-bottom: 18px
+					.navbar-item
+						.navbar-link
+							color: $very-dark-blue
+							display: table
+							font-weight: 600
+							margin: auto
+							&::after
+								@include arrow(#ff525d)
+					.navbar-dropdown
+						background: $gray-1 !important
+						text-align: center
+						padding: 0
+						overflow: hidden
+						height: 0
+						&.is-active
+							height: auto
+						.navbar-item
+							color: $very-dark-blue
+							font-weight: 600
+				.navbar-end
+					text-align: center
+					position: relative
+					padding-top: 18px
+					&::before
+						background: $gray
+						content: ''
+						height: 1px
+						position: absolute
+						top: 0
+						left: 50%
+						transform: translateX(-50%)
+						width: 80%
+					.navbar-item
+						.link
+							color: $very-dark-blue
+						.button
+							&.is-primary
+								background: $gradient-1
+								color: $white

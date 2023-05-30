@@ -1,7 +1,6 @@
 export const MenuInfo = [
 	{
 		name: 'Product',
-		link: '#',
 		submenu: [
 			{
 				name: 'Analythics',
@@ -19,7 +18,6 @@ export const MenuInfo = [
 	},
 	{
 		name: 'Company',
-		link: '#',
 		submenu: [
 			{
 				name: 'Vision',
@@ -37,7 +35,6 @@ export const MenuInfo = [
 	},
 	{
 		name: 'Connect',
-		link: '#',
 		submenu: [
 			{
 				name: 'Contact',
