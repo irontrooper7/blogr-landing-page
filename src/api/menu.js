@@ -3,15 +3,23 @@ export const MenuInfo = [
 		name: 'Product',
 		submenu: [
 			{
-				name: 'Analythics',
+				name: 'Overview',
 				link: '#'
 			},
 			{
-				name: 'SEO Optimization',
+				name: 'Pricing',
 				link: '#'
 			},
 			{
-				name: 'Develop Site',
+				name: 'Marketplace',
+				link: '#'
+			},
+			{
+				name: 'Features',
+				link: '#'
+			},
+			{
+				name: 'Integrations',
 				link: '#'
 			},
 		]
@@ -20,15 +28,19 @@ export const MenuInfo = [
 		name: 'Company',
 		submenu: [
 			{
-				name: 'Vision',
+				name: 'About',
 				link: '#'
 			},
 			{
-				name: 'Our Team',
+				name: 'Team',
 				link: '#'
 			},
 			{
-				name: 'Offices',
+				name: 'Blog',
+				link: '#'
+			},
+			{
+				name: 'Careers',
 				link: '#'
 			},
 		]

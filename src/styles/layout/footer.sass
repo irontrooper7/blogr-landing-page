@@ -1,0 +1,17 @@
+.footer
+    background: $black
+    border-top-right-radius: 100px
+    padding: 3rem 1.5rem
+    text-align: center
+    li
+        margin-bottom: 10px
+        a
+            color: $white
+            &:hover
+                text-decoration: underline
+
+// RESPONSIVE DESKTOP
+@mixin footer-desktop
+    .footer
+        padding: 3rem 1.5rem 6rem
+        text-align: left

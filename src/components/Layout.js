@@ -1,10 +1,11 @@
 import Footer from './Footer'
+import { MenuInfo } from '../api/menu'
 
 export default function Layout({ children }) {
 	return (
 		<main>
 			{children}
-			<Footer />
+			<Footer information={MenuInfo} />
 		</main>
 	)
 }
