@@ -1,38 +1,33 @@
 .final-section
 	text-align: center
+	margin-bottom: 2rem
 
 //RESPONSIVE TABLET
-@media only screen and (min-width: 769px)
+@mixin final-section-tablet
 	.final-section
 		background: url(/images/illustration-laptop-desktop.svg) no-repeat
 		background-position: -50%
-		background-size: 70%
-		margin: 2rem 0px
+		background-size: 65%
+		margin-bottom: 3rem
 		text-align: left
 		.image
 			opacity: 0
 			z-index: -1
-
 
 //RESPONSIVE DESKTOP
-@media only screen and (min-width: 1024px)
+@mixin final-section-desktop
 	.final-section
 		background: url(/images/illustration-laptop-desktop.svg) no-repeat
-		background-position: 0%
+		background-position: -10%
 		background-size: contain
-		margin: 2rem 0px
 		text-align: left
 		.image
 			opacity: 0
 			z-index: -1
 
-@media only screen and (min-width: 1441px)
+// RESPONSIVE DESKTOP FULL
+@mixin final-section-desktop-full
 	.final-section
 		background: url(/images/illustration-laptop-desktop.svg) no-repeat
 		background-position: 10vw
 		background-size: contain
-		margin: 3rem 0px
-	
-
-// //RESPONSIVE DESKTOP
-// @media only screen and (min-width: 1024px)

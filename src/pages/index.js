@@ -17,20 +17,20 @@ export default function Home() {
 					<div className='hero-head'>
 						<Header information={MenuInfo} />
 					</div>
-					<div className="hero-body has-text-centered">
+					<article className="hero-body has-text-centered">
 						<h1><strong>A modern publishing platform</strong></h1>
 						<p className='has-text-white'>Grow your audience and build your online brand</p>
 						<div className="buttons is-centered my-5">
 							<button className="button is-primary">Start fro Free</button>
 							<button className="button is-secondary">Learn More</button>
 						</div>
-					</div>
+					</article>
 				</section>
-				<section className='introduction-section section'>
+				<section className='first-section section'>
 					<div className='container'>
-						<div className='has-text-centered'>
+						<article className='has-text-centered'>
 							<h2><strong>Designed for the future</strong></h2>
-						</div>
+						</article>
 						<div className='columns is-align-items-center'>
 							<div className='column is-6'>
 								<article>
@@ -41,9 +41,9 @@ export default function Home() {
 								</article>
 							</div>
 							<div className='column is-6'>
-								<div className='image'>
+								<figure className='image'>
 									<img src='/images/illustration-editor-mobile.svg' alt='Introducing Blogr' />
-								</div>
+								</figure>
 							</div>
 						</div>
 					</div>
@@ -52,9 +52,9 @@ export default function Home() {
 					<div className='container'>
 						<div className='columns is-align-items-center'>
 							<div className='column is-6'>
-								<div className='image'>
+								<figure className='image'>
 									<img src='/images/illustration-phones.svg' alt='Introducing Blogr' />
-								</div>
+								</figure>
 							</div>
 							<div className='column is-6'>
 								<article>
@@ -69,9 +69,9 @@ export default function Home() {
 					<div className='container'>
 						<div className='columns is-align-items-center'>
 							<div className='column is-6'>
-								<div className='image'>
+								<figure className='image'>
 									<img src='/images/illustration-laptop-mobile.svg' alt='Introducing Blogr' />
-								</div>
+								</figure>
 							</div>
 							<div className='column is-6'>
 								<article>

@@ -1,9 +1,17 @@
 .hero-banner
-    background: url('/images/bg-pattern-intro-desktop.svg'), $gradient-1
-    background-position: left, center
+    background: url('/images/bg-pattern-intro-mobile.svg'), $gradient-1
+    background-position: 30%, center
     background-repeat: no-repeat
-    background-size: 150%, 100%
+    background-size: 250%, 100%
     border-bottom-left-radius: 100px
     h1
         strong, b
             color: $white
+
+// RESPONSIVE DESKTOP
+@mixin hero-banner-desktop
+    .hero-banner
+        background: url('/images/bg-pattern-intro-desktop.svg'), $gradient-1
+        background-position: left, center
+        background-repeat: no-repeat
+        background-size: 150%, 100%

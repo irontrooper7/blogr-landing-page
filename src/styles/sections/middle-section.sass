@@ -1,5 +1,6 @@
 .middle-section
 	position: relative
+	text-align: center
 	&::before
 		background: url('/images/bg-pattern-circles.svg'), $very-dark-blue
 		background-repeat: no-repeat
@@ -18,9 +19,10 @@
 		strong
 			color: $white
 
-
+// RESPONSIVE TABLET
 @mixin middle-section-tablet
 	.middle-section
+		text-align: left
 		&::before
 			background: url('/images/bg-pattern-circles.svg'), $very-dark-blue
 			background-repeat: no-repeat
@@ -30,6 +32,7 @@
 			bottom: 53%
 			transform: translateY(50%)
 
+// RESPONSIVE DESKTOP
 @mixin middle-section-desktop
 	.middle-section
 		&::before
